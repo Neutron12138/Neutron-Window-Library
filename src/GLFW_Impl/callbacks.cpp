@@ -2,6 +2,7 @@
 #define __NEUTRONWL_IMPL_GLFW_CALLBACKS_CPP__
 
 #include "callbacks.hpp"
+#include "GLFWWindow.hpp"
 
 namespace nwl
 {
@@ -14,7 +15,11 @@ namespace nwl
         void *userData = glfwGetWindowUserPointer(window);
         if (userData != nullptr)
         {
-            static_cast<Window *>(userData)->onResized(glm::uvec2(width, height));
+            GLFWWindow *window = static_cast<GLFWWindow *>(userData);
+            window->onResized(
+                glm::uvec2(
+                    width,
+                    height));
         }
     }
 } // namespace nwl

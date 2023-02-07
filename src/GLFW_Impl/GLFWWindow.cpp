@@ -38,7 +38,6 @@ namespace nwl
             m_window = window;
             glfwSetWindowUserPointer(m_window, this);
             glfwSetFramebufferSizeCallback(m_window, nwl_glfw_framebuffer_size);
-            onCreated();
             return true;
         }
 
@@ -50,7 +49,6 @@ namespace nwl
     {
         if (m_window != nullptr)
         {
-            onDestroyed();
             glfwDestroyWindow(m_window);
             m_window = nullptr;
         }

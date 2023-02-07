@@ -22,12 +22,6 @@ namespace nwl
         SelfType &operator=(const SelfType &from) = default;
 
     public:
-        /// @brief 当窗口创建时调用
-        virtual void onCreated();
-
-        /// @brief 当窗口销毁时调用
-        virtual void onDestroyed();
-
         /// @brief 当窗口大小改变时调用
         /// @param new_size 窗口新大小
         virtual void onResized(const glm::uvec2 &new_size);

@@ -5,8 +5,6 @@
 
 namespace nwl
 {
-    void Window::onCreated() {}
-    void Window::onDestroyed() {}
     void Window::onResized(const glm::uvec2 &new_size) {}
 } // namespace nwl
 

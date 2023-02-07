@@ -8,4 +8,9 @@
 #include "GLFW_Impl/callbacks.hpp"
 #include "GLFW_Impl/GLFWWindow.hpp"
 
+#include "FreeGLUT_Impl/callbacks.hpp"
+#include "FreeGLUT_Impl/FreeGLUTWindow.hpp"
+
+#include "SFML_Impl/SFMLWindow.hpp"
+
 #endif
