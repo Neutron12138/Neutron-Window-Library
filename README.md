@@ -3,4 +3,6 @@
 
 ## 说明
 
-目前只支持GLFW，之后增加FreeGLUT
+支持SFML、FreeGLUT、GLFW
+
+功能简陋
