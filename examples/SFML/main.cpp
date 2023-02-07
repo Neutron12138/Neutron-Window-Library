@@ -1,27 +1,19 @@
 #include <iostream>
 #include <GL/glew.h>
-#include <GLFW/glfw3.h>
+#include <GL/freeglut.h>
 #include "../../src/NWL.hpp"
 #include "../../src/NWL.cpp"
 
-class MyWindow : public nwl::GLFWWindow
+class MyWindow : public nwl::SFMLWindow
 {
 public:
     MyWindow()
     {
-        if (!create(640, 480, "GLFW Window"))
-        {
-            std::cout << "create(640, 480, \"GLFW Window\")" << std::endl;
-            terminate_glfw();
-            exit(EXIT_FAILURE);
-        }
-
-        make_context_current();
+        create(640, 480, "SFML Window");
 
         if (glewInit() != GLEW_OK)
         {
             std::cout << "glewInit() != GLEW_OK" << std::endl;
-            terminate_glfw();
             exit(EXIT_FAILURE);
         }
     }
@@ -36,15 +28,8 @@ public:
     }
 };
 
-int main()
+int main(int argc, char *argv[])
 {
-    if (!nwl::GLFWWindow::initialize_glfw())
-    {
-        std::cout << "nwl::GLFWWindow::initialize_glfw()" << std::endl;
-        exit(EXIT_FAILURE);
-    }
-    nwl::GLFWWindow::init_opengl_context_hint(3, 3);
-
     MyWindow window;
 
     while (window.is_open())
@@ -54,8 +39,6 @@ int main()
         window.display();
         window.process_events();
     }
-
-    nwl::GLFWWindow::terminate_glfw();
 
     return 0;
 }
