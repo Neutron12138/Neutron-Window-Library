@@ -1,0 +1,6 @@
+#ifndef __NEUTRONWL_CONFIG_HPP__
+#define __NEUTRONWL_CONFIG_HPP__
+
+// NEUTRONWL_CONFIG_SFML 使用SFML
+
+#endif
