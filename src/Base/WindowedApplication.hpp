@@ -20,7 +20,7 @@ namespace nwl
 
     public:
         WindowedApplication() = default;
-        explicit WindowedApplication(const SelfType &from) = default;
+        WindowedApplication(const SelfType &from) = default;
         ~WindowedApplication() override = default;
 
     public:

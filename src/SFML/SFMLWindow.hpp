@@ -22,8 +22,8 @@ namespace nwl
 
     public:
         SFMLWindow() = default;
-        explicit SFMLWindow(const WindowPointer &window);
-        explicit SFMLWindow(const SelfType &from) = default;
+        SFMLWindow(const WindowPointer &window);
+        SFMLWindow(const SelfType &from) = default;
         ~SFMLWindow() override = default;
 
     public:

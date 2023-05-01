@@ -15,7 +15,7 @@ namespace nwl
 
     public:
         Window() = default;
-        explicit Window(const SelfType &from) = default;
+        Window(const SelfType &from) = default;
         ~Window() override = default;
 
     public:
